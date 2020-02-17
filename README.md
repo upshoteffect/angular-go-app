@@ -19,6 +19,13 @@ go get -u github.com/gorilla/mux
 go get github.com/rs/cors
 ```
 
+[jwt-go](https://github.com/dgrijalva/jwt-go) which is a Golang implementation of JSON Web Tokens (JWT)
+```
+go get github.com/dgrijalva/jwt-go
+```
+
+Using a package manager, install all the packages needed for the Angular app.
+
 # Run The Project
 After installing, using `npm start` will run both the Go server (by default on port 4201) and Webpack Dev Server (on port 4200). `npm start` runs the `serve.sh` bash script which in turn starts `ng serve` and `gin --port 4201 --path . --build ./src/web-api/ --i --all` which runs the Go server parallely. You can then access the app by visiting `http://localhost:4200`.
 
