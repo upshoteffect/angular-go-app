@@ -1,0 +1,30 @@
+<nav class="navbar navbar-light">
+  <div class="container">
+    <span class="navbar-brand text-primary"><h4>schnell-schnell</h4></span>
+
+    <!-- Show this for logged out users -->
+    <ul *appShowAuthed="false"
+      class="nav navbar-nav pull-xs-right">
+
+      <li class="nav-item">
+        <a class="nav-link"
+          routerLink="/login"
+          routerLinkActive="active">
+          Sign in
+        </a>
+      </li>
+
+    </ul>
+
+    <!-- Show this for logged in users -->
+    <ul *appShowAuthed="true"
+      class="nav navbar-nav pull-xs-right">
+
+      <li class="nav-item">
+        Logged in as {{ currentUser.email }}.
+      </li>
+
+    </ul>
+
+  </div>
+</nav>

@@ -1,0 +1,44 @@
+<div class="auth-page">
+  <div class="container page d-flex align-items-center col justify-content-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3 col-xs-12">
+          <h1 class="text-xs-center">Sign in</h1>
+          <app-list-errors [errors]="errors"></app-list-errors>
+          <form [formGroup]="authForm" (ngSubmit)="submitForm()">
+            <fieldset [disabled]="isSubmitting">
+              <fieldset class="form-group">
+                <input
+                  formControlName="email"
+                  placeholder="Email"
+                  class="form-control form-control-lg"
+                  type="text" />
+              </fieldset>
+              <fieldset class="form-group">
+                <input
+                  formControlName="password"
+                  placeholder="Password"
+                  class="form-control form-control-lg"
+                  type="password" />
+              </fieldset>
+              <fieldset class="form-group">
+                <input 
+                  formControlName="pin" 
+                  placeholder="Token" 
+                  class="form-control form-control-lg"
+                  type="number"
+                  min="0000"
+                  max="9999" />
+              </fieldset>
+              <button class="btn btn-lg btn-primary pull-xs-right" [disabled]="!authForm.valid" type="submit">
+                Sign in
+              </button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
